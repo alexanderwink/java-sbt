@@ -4,9 +4,11 @@ RUN echo "deb http://dl.bintray.com/sbt/debian /" | tee -a /etc/apt/sources.list
 
 RUN apt-key adv --keyserver hkp://keyserver.ubuntu.com:80 --recv 2EE0EA64E40A89B84B2DF73499E82A75642AC823
 
-RUN apt-get update && apt-get install -y --no-install-recommends unzip bash openssh-client nodejs git ca-certificates fontconfig xvfb libpango1.0-0 libxss1 fonts-liberation libappindicator1 xdg-utils libgtk-3-0 lsb-release sbt && rm -rf /var/lib/apt/lists/* && ln -s /usr/bin/nodejs /usr/bin/node
+RUN apt-get update && apt-get install -y --no-install-recommends unzip bash openssh-client nodejs git ca-certificates fontconfig xvfb libpango1.0-0 libxss1 fonts-liberation libappindicator1 xdg-utils libgtk-3-0 lsb-release libnss3 sbt && rm -rf /var/lib/apt/lists/* && ln -s /usr/bin/nodejs /usr/bin/node
 
-RUN sbt sbtVersion
+COPY play/2.5.18 /tmp/play
+
+RUN cd /tmp/play && sbt compile && rm -Rf /tmp/play
 
 ENV PHANTOM_JS phantomjs-2.1.1-linux-x86_64
 
@@ -21,7 +23,7 @@ RUN cd /opt \
  && dpkg -i google-chrome-stable_current_amd64.deb
 
 RUN cd /opt \
- && wget https://chromedriver.storage.googleapis.com/2.34/chromedriver_linux64.zip \
+ && wget https://chromedriver.storage.googleapis.com/2.35/chromedriver_linux64.zip \
  && unzip chromedriver_linux64.zip
 
 VOLUME /src
