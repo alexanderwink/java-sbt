@@ -6,7 +6,7 @@ RUN apt-key adv --keyserver hkp://keyserver.ubuntu.com:80 --recv 2EE0EA64E40A89B
 
 RUN apt-get update && apt-get install -y --no-install-recommends unzip bash openssh-client nodejs git ca-certificates fontconfig xvfb libpango1.0-0 libxss1 fonts-liberation libappindicator1 xdg-utils libgtk-3-0 lsb-release libnss3 sbt && rm -rf /var/lib/apt/lists/* && ln -s /usr/bin/nodejs /usr/bin/node
 
-COPY play/2.5.18 /tmp/play
+COPY playproject /tmp/play
 
 RUN cd /tmp/play && sbt compile && rm -Rf /tmp/play
 
