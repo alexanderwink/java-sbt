@@ -8,7 +8,7 @@ RUN apt-get update && apt-get install -y --no-install-recommends unzip bash open
 
 COPY play /tmp/play
 
-RUN cd /tmp/play && sbt test && rm -Rf /tmp/play
+RUN cd /tmp/play && sbt compile && rm -Rf /tmp/play
 
 ENV PHANTOM_JS phantomjs-2.1.1-linux-x86_64
 
