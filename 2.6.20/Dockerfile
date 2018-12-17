@@ -4,7 +4,7 @@ RUN echo "deb http://dl.bintray.com/sbt/debian /" | tee -a /etc/apt/sources.list
 
 RUN apt-key adv --keyserver hkp://keyserver.ubuntu.com:80 --recv 2EE0EA64E40A89B84B2DF73499E82A75642AC823
 
-RUN apt-get update && apt-get install -y --no-install-recommends unzip bash openssh-client nodejs git ca-certificates fontconfig xvfb libpango1.0-0 libxss1 fonts-liberation libappindicator1 xdg-utils libgtk-3-0 lsb-release libnss3 sbt && rm -rf /var/lib/apt/lists/* && ln -s /usr/bin/nodejs /usr/bin/node
+RUN apt-get update && apt-get install -y --no-install-recommends unzip bash openssh-client nodejs git ca-certificates fontconfig xvfb libpango1.0-0 libxss1 fonts-liberation libappindicator1 xdg-utils libgtk-3-0 lsb-release libnss3 libappindicator3-1 sbt && rm -rf /var/lib/apt/lists/* && ln -s /usr/bin/nodejs /usr/bin/node
 
 COPY play /tmp/play
 
