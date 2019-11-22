@@ -15,11 +15,11 @@ RUN cd /opt \
  && ln -sf /usr/local/share/$PHANTOM_JS/bin/phantomjs /usr/local/bin
 
 RUN cd /opt \
- && wget http://www.slimjetbrowser.com/chrome/files/76.0.3809.100/google-chrome-stable_current_amd64.deb \
+ && wget https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb \
  && dpkg -i google-chrome-stable_current_amd64.deb
 
 RUN cd /opt \
- && wget https://chromedriver.storage.googleapis.com/76.0.3809.68/chromedriver_linux64.zip \
+ && wget https://chromedriver.storage.googleapis.com/78.0.3904.105/chromedriver_linux64.zip \
  && unzip chromedriver_linux64.zip
 
 COPY play /tmp/play
