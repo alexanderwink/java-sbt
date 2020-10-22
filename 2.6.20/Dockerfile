@@ -27,8 +27,6 @@ RUN apt-get update && apt-get install -y \
   libxtst6 \
   && rm -rf /var/lib/apt/lists/*
 
-RUN ln -sf /usr/bin/nodejs /usr/bin/node
-
 RUN cd /opt \
   && wget https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb \
   && dpkg -i google-chrome-stable_current_amd64.deb \
