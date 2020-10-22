@@ -21,6 +21,7 @@ RUN apt-get update && apt-get install -y \
   libgtk-3-0 \
   lsb-release \
   libnss3 \
+  libgbm1 \
   libappindicator3-1 \
   sbt=1.3.6 \
   libasound2 \
