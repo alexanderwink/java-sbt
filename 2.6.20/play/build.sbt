@@ -19,5 +19,11 @@ libraryDependencies ++= Seq(
   "com.google.api-client" % "google-api-client" % "1.19.1",
   "com.github.rjeschke" % "txtmark" % "0.13",
   "org.yaml" % "snakeyaml" % "1.17",
-  "org.seleniumhq.selenium" % "selenium-chrome-driver" % "3.5.3" % "test"
+  "org.seleniumhq.selenium" % "selenium-chrome-driver" % "3.5.3" % "test",
+  "org.apache.commons" % "commons-csv" % "1.6",
+  "com.github.bohnman" % "squiggly-filter-jackson" % "1.3.18",
+  "com.github.maricn" % "logback-slack-appender" % "1.4.0",
+  "io.github.java-diff-utils" % "java-diff-utils" % "4.5",
+  "io.swagger" %% "swagger-play2" % "1.6.1",
+  "com.fasterxml.jackson.datatype" % "jackson-datatype-joda" % "2.9.10"
 )
