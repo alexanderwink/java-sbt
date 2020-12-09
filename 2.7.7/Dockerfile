@@ -34,7 +34,7 @@ RUN cd /opt \
   && rm -f google-chrome-stable_current_amd64.deb
 
 RUN cd /opt \
-  && wget https://chromedriver.storage.googleapis.com/86.0.4240.22/chromedriver_linux64.zip \
+  && wget https://chromedriver.storage.googleapis.com/87.0.4280.88/chromedriver_linux64.zip \
   && unzip chromedriver_linux64.zip \
   && rm -f chromedriver_linux64.zip
 
