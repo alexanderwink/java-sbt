@@ -1,6 +1,6 @@
 lazy val root = (project in file(".")).enablePlugins(PlayJava, PlayEbean, SbtWeb)
 
-scalaVersion := "2.12.10"
+scalaVersion := "2.11.12"
 
 libraryDependencies ++= Seq(
   javaJdbc,
@@ -18,9 +18,10 @@ libraryDependencies ++= Seq(
   "com.github.rjeschke" % "txtmark" % "0.13",
   "org.yaml" % "snakeyaml" % "1.17",
   "org.seleniumhq.selenium" % "selenium-chrome-driver" % "3.141.59" % "test",
-  "org.apache.commons" % "commons-lang3" % "3.10",
   "io.swagger" %% "swagger-play2" % "1.6.1",
   "com.fasterxml.jackson.datatype" % "jackson-datatype-joda" % "2.9.10",
-  "org.glassfish.jaxb" % "jaxb-core" % "2.3.0.1",
-  "org.glassfish.jaxb" % "jaxb-runtime" % "2.3.2"
+  "org.apache.commons" % "commons-lang3" % "3.8.1",
+  "com.h2database" % "h2" % "1.4.192" % "test",
+  "javax.xml.bind" % "jaxb-api" % "2.3.1",
+  "org.glassfish.jaxb" % "jaxb-runtime" % "2.3.1",
 )
